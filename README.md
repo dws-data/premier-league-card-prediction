@@ -24,7 +24,7 @@ This project predicts the number of yellow and red cards in Premier League footb
 * MAE: 1.67 cards | RMSE: 2.13 cards | Log-Loss: 2.16 cards
 * 66.5% of predictions within 2 cards of actual outcome
 * Discovered away teams are more context-dependent (55% influenced by home opponent vs 45% own tendency)
-* Removing referee scaling improved all metrics (simpler model performed better)
+* Removing referee scaling improved all metrics — team tendencies are learned from real historical matches (which already include various referees), so the learned mix weights implicitly capture referee effects; explicit scaling was redundant and conflicted with the learned weights
 
 ## Data
 * Data files are not included in this repository. The model uses match-level data (5 seasons, 2021-2026), team statistics, and referee data sourced from football-data.co.uk, thestatsdontlie.com, and whoscored.com.
@@ -35,5 +35,4 @@ This project predicts the number of yellow and red cards in Premier League footb
 ## Future Work
 * Parameter tuning: Grid search for optimal decay rates (alpha values).
 * Feature engineering: Derby/rivalry indicators.
-
-
+* Alternative distributions: Negative binomial for overdispersion.
