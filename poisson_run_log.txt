@@ -1,0 +1,54 @@
+Initial training season: 2021-2022
+Number of test weeks: 143
+Week 2022-08-01/2022-08-07: only 0 training rows, skipping (need 100).
+Week 2022-08-08/2022-08-14: only 0 training rows, skipping (need 100).
+Week 2022-08-15/2022-08-21: only 6 training rows, skipping (need 100).
+Week 2022-08-22/2022-08-28: only 16 training rows, skipping (need 100).
+Week 2022-08-29/2022-09-04: only 27 training rows, skipping (need 100).
+Week 2022-09-12/2022-09-18: only 47 training rows, skipping (need 100).
+Week 2022-09-26/2022-10-02: only 54 training rows, skipping (need 100).
+Week 2022-10-03/2022-10-09: only 63 training rows, skipping (need 100).
+Week 2022-10-10/2022-10-16: only 73 training rows, skipping (need 100).
+Week 2022-10-17/2022-10-23: only 84 training rows, skipping (need 100).
+
+============================================================
+            POISSON REGRESSION (GLM) PERFORMANCE            
+============================================================
+Matches:        1,405
+MAE:            1.6983
+RMSE:           2.1423
+Bias:           0.0691
+Log-Loss:       2.1613
+Within 2 cards: 65.1%
+============================================================
+
+Matches predicted by both models: 1401
+
+============================================================
+              EXISTING MODEL (common matches)               
+============================================================
+Matches:        1,401
+MAE:            1.6879
+RMSE:           2.1416
+Bias:           -0.0795
+Log-Loss:       2.1616
+Within 2 cards: 65.7%
+============================================================
+
+============================================================
+                POISSON GLM (common matches)                
+============================================================
+Matches:        1,401
+MAE:            1.6988
+RMSE:           2.1433
+Bias:           0.0676
+Log-Loss:       2.1618
+Within 2 cards: 65.1%
+============================================================
+
+                          model  matches      mae     rmse      bias  log_loss  within_2
+Existing (correlation-weighted)     1401 1.687880 2.141596 -0.079466  2.161591 65.738758
+       Poisson regression (GLM)     1401 1.698757 2.143280  0.067556  2.161824 65.096360
+
+Saved outputs/results/poisson_match_predictions.csv
+Saved outputs/results/poisson_vs_existing_comparison.csv
